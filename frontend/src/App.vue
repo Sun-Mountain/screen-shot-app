@@ -34,12 +34,7 @@ export default {
   methods: {
     makeWebsiteThumbnail() {
       axios.post("https://screenshotapi.net/api/v1/screenshot", {
-        token: 'SWSZDNR414URKK5BXI7ES4TKGU8ESQC6',
         url: this.websiteUrl,
-        width: 1920,
-        height: 1080,
-        output: 'json',
-        thumbnail_width: 300
       })
       .then((response) => {
         this.thumbnailUrl = response.data.screenshot;
