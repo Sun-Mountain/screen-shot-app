@@ -1,3 +1,5 @@
+![Picture of the launched application. The heading in the picture says Generate a thumbnail of a website.](app_screenshot.png)
+
 # About
 As a learning exercise, I followed Free Code Camp's [How to Set Up a Real-World Project with Go and Vue](https://www.freecodecamp.org/news/how-i-set-up-a-real-world-project-with-go-and-vue/) tutorial.
 
