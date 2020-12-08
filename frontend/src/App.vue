@@ -9,13 +9,13 @@
             <input v-model="websiteUrl" type="text" id="website-imput" placeholder="Enter a website" class="form-control">
           </div>
           <div class="form-group">
-            <button class="btn btn-pramary">Generate!</button>
+            <button class="btn btn-primary">Generate!</button>
           </div>
         </form>
       </div>
-      <div class="thumbnail-container">
-        <img :src="thumbnailUrl"/>
-      </div>
+    </div>
+    <div class="thumbnail-container">
+      <img class="thumbnail" :src="thumbnailUrl"/>
     </div>
   </div>
 </template>
@@ -34,13 +34,13 @@ export default {
   methods: {
     makeWebsiteThumbnail() {
       axios.post("https://screenshotapi.net/api/v1/screenshot", {
-        url: this.websiteUrl,
+        url: this.websiteUrl
       })
       .then((response) => {
         this.thumbnailUrl = response.data.screenshot;
       })
       .catch((err) => {
-        console.log(`The API returned an error: ${err}`);
+        console.log(`The API returned an ${err}`);
       })
     }
   }
@@ -63,5 +63,9 @@ export default {
     max-width:100%;
     max-height: auto;
   }
+}
+.thumbnail {
+  border: 1px solid #38b67b;
+  margin: 0 0 25px 0;
 }
 </style>
