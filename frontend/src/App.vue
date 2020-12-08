@@ -13,7 +13,7 @@
           </div>
         </form>
       </div>
-      <div>
+      <div class="thumbnail-container">
         <img :src="thumbnailUrl"/>
       </div>
     </div>
@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -55,5 +55,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.thumbnail-container {
+  width: 300;
+
+  img {
+    max-width:100%;
+    max-height: auto;
+  }
 }
 </style>
